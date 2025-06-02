@@ -1,0 +1,209 @@
+/* Mobile-First Responsive Styles */
+@media (max-width: 767.98px) {
+    /* Base Layout Adjustments */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Typography Adjustments */
+    h1, .display-4 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    h2, .display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    /* Navigation */
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Hero Sections */
+    .hero-section,
+    .services-hero,
+    .about-hero,
+    .testimonials-hero,
+    .contact-hero {
+        min-height: 70vh;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1,
+    .services-hero h1,
+    .about-hero h1,
+    .testimonials-hero h1,
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    /* Button Sizing */
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Card Layouts */
+    .service-card,
+    .testimonial-card,
+    .team-card {
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+    
+    /* Contact Page Specific */
+    .contact-info-card {
+        margin-top: 2rem;
+    }
+    
+    .map-section {
+        height: 300px;
+    }
+    
+    /* Form Elements */
+    .needs-validation .form-control,
+    .needs-validation .form-select {
+        padding: 0.65rem 0.9rem;
+    }
+    
+    /* Grid Layouts */
+    .row-cols-md-2 > *,
+    .row-cols-lg-3 > *,
+    .row-cols-lg-4 > * {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    /* Emergency Banner */
+    .emergency-banner {
+        text-align: center;
+    }
+    
+    .emergency-banner .btn {
+        margin-top: 0.5rem;
+        display: inline-block;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Hero Sections */
+    .hero-section,
+    .services-hero,
+    .about-hero,
+    .testimonials-hero,
+    .contact-hero {
+        min-height: 60vh;
+    }
+    
+    /* Card Layouts */
+    .row-cols-md-2 > * {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    /* Typography */
+    h1, .display-4 {
+        font-size: 2.25rem;
+    }
+}
+
+/* Small Mobile Devices (<= 576px) */
+@media (max-width: 575.98px) {
+    /* Even Smaller Typography */
+    h1, .display-4 {
+        font-size: 1.75rem;
+    }
+    
+    h2, .display-5 {
+        font-size: 1.5rem;
+    }
+    
+    /* Padding Adjustments */
+    .hero-section,
+    .services-hero,
+    .about-hero,
+    .testimonials-hero,
+    .contact-hero {
+        padding: 60px 0;
+    }
+    
+    /* Button Stacking */
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Form Elements */
+    .needs-validation .form-control,
+    .needs-validation .form-select {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .hero-section,
+    .services-hero,
+    .about-hero,
+    .testimonials-hero,
+    .contact-hero {
+        min-height: 100vh;
+    }
+}
+
+/* High DPI Devices */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper images */
+    .hero-section,
+    .services-hero,
+    .about-hero,
+    .testimonials-hero,
+    .contact-hero {
+        background-attachment: fixed;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        padding-top: 0;
+        font-size: 12pt;
+    }
+    
+    .navbar,
+    .emergency-banner,
+    footer {
+        display: none;
+    }
+    
+    a[href^="tel:"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,267 @@
+/* Base Styles */
+:root {
+    --primary: #0d6efd;
+    --primary-dark: #0b5ed7;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/hero-banner.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Text Styles */
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { 
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Services Page Specific Styles */
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/services/hero.jpg') center/cover no-repeat;
+    min-height: 60vh;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    font-size: 1.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .services-hero {
+        min-height: 50vh;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+}
+/* About Page Specific Styles */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/about/hero.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.team-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .about-hero {
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .team-card {
+        margin-bottom: 1.5rem;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* Testimonials Page Specific Styles */
+.testimonials-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/testimonials/hero.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Star Ratings */
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Video Testimonial Section */
+.video-testimonial {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .testimonials-hero {
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .testimonial-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .video-testimonial {
+        margin-bottom: 1.5rem;
+    }
+}
+/* Contact Page Specific Styles */
+.contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/contact/hero.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Form Styles */
+.needs-validation .form-control,
+.needs-validation .form-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.needs-validation .form-control:focus,
+.needs-validation .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Contact Info Cards */
+.contact-info-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Emergency Banner */
+.emergency-banner {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .contact-hero {
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .contact-info-card {
+        margin-top: 2rem;
+    }
+    
+    .map-section {
+        height: 300px;
+    }
+}
